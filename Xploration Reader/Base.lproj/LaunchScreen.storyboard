@@ -15,8 +15,22 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="center_launcher_image@1x" translatesAutoresizingMaskIntoConstraints="NO" id="jV0-9p-pFP">
+                                <rect key="frame" x="174" y="93" width="253" height="253"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottom_launcher_image@1x" translatesAutoresizingMaskIntoConstraints="NO" id="ZDr-1W-iJy">
+                                <rect key="frame" x="174" y="500" width="253" height="45"/>
+                            </imageView>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.1019607843" green="0.13725490200000001" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jV0-9p-pFP" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="73" id="Cig-Wg-48S"/>
+                            <constraint firstItem="jV0-9p-pFP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Fl6-69-Syg"/>
+                            <constraint firstItem="ZDr-1W-iJy" firstAttribute="leading" secondItem="jV0-9p-pFP" secondAttribute="leading" id="KF4-VQ-BLS"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ZDr-1W-iJy" secondAttribute="bottom" constant="55" id="nb5-bQ-Rgr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +38,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bottom_launcher_image@1x" width="253" height="45"/>
+        <image name="center_launcher_image@1x" width="253" height="253"/>
+    </resources>
 </document>
