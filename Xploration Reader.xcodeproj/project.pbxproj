@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65C4096B1BBA96040021B86D /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4096A1BBA96040021B86D /* ArticlesViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		65C409701BBA99100021B86D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4096F1BBA99100021B86D /* AboutViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		65C5208C1BB1466C0092675C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C5208B1BB1466C0092675C /* AppDelegate.swift */; };
-		65C5208E1BB1466C0092675C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C5208D1BB1466C0092675C /* ViewController.swift */; };
 		65C520911BB1466C0092675C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C5208F1BB1466C0092675C /* Main.storyboard */; };
 		65C520941BB1466D0092675C /* Xploration_Reader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65C520921BB1466D0092675C /* Xploration_Reader.xcdatamodeld */; };
 		65C520961BB1466D0092675C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C520951BB1466D0092675C /* Assets.xcassets */; };
@@ -35,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65C4096A1BBA96040021B86D /* ArticlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		65C4096F1BBA99100021B86D /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		65C520881BB1466C0092675C /* Xploration Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xploration Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C5208B1BB1466C0092675C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65C5208D1BB1466C0092675C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		65C520901BB1466C0092675C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65C520931BB1466D0092675C /* Xploration_Reader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Xploration_Reader.xcdatamodel; sourceTree = "<group>"; };
 		65C520951BB1466D0092675C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +78,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65C4096E1BBA96780021B86D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				65C5208B1BB1466C0092675C /* AppDelegate.swift */,
+				65C4096A1BBA96040021B86D /* ArticlesViewController.swift */,
+				65C4096F1BBA99100021B86D /* AboutViewController.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		65C5207F1BB1466C0092675C = {
 			isa = PBXGroup;
 			children = (
@@ -99,11 +111,10 @@
 		65C5208A1BB1466C0092675C /* Xploration Reader */ = {
 			isa = PBXGroup;
 			children = (
-				65C5208B1BB1466C0092675C /* AppDelegate.swift */,
-				65C5208D1BB1466C0092675C /* ViewController.swift */,
+				65C4096E1BBA96780021B86D /* Classes */,
 				65C5208F1BB1466C0092675C /* Main.storyboard */,
-				65C520951BB1466D0092675C /* Assets.xcassets */,
 				65C520971BB1466D0092675C /* LaunchScreen.storyboard */,
+				65C520951BB1466D0092675C /* Assets.xcassets */,
 				65C5209A1BB1466D0092675C /* Info.plist */,
 				65C520921BB1466D0092675C /* Xploration_Reader.xcdatamodeld */,
 			);
@@ -259,7 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				65C520941BB1466D0092675C /* Xploration_Reader.xcdatamodeld in Sources */,
-				65C5208E1BB1466C0092675C /* ViewController.swift in Sources */,
+				65C4096B1BBA96040021B86D /* ArticlesViewController.swift in Sources */,
+				65C409701BBA99100021B86D /* AboutViewController.swift in Sources */,
 				65C5208C1BB1466C0092675C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +499,7 @@
 				65C520B51BB1466D0092675C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65C520B61BB1466D0092675C /* Build configuration list for PBXNativeTarget "Xploration ReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +508,7 @@
 				65C520B81BB1466D0092675C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65C520B91BB1466D0092675C /* Build configuration list for PBXNativeTarget "Xploration ReaderUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +517,7 @@
 				65C520BB1BB1466D0092675C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
