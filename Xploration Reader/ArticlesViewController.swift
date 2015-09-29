@@ -22,11 +22,22 @@ class ArticlesViewController: UIViewController {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let identifier = "ArticlesTableViewCell"
+        
+        var cell: ArticlesTableViewCell! = tableView.dequeueReusableCellWithIdentifier(identifier) as? ArticlesTableViewCell
+        
+        if cell == nil {
+            tableView.registerNib(UINib(nibName: "ArticlesTableViewCell", bundle: nil), forCellReuseIdentifier: identifier)
+            cell = tableView.dequeueReusableCellWithIdentifier(identifier) as? ArticlesTableViewCell
+        }
+        
+        return cell;
+
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

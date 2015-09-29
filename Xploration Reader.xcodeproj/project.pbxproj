@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		65C4096B1BBA96040021B86D /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4096A1BBA96040021B86D /* ArticlesViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		65C409701BBA99100021B86D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4096F1BBA99100021B86D /* AboutViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		65C409741BBAAFD00021B86D /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C409721BBAAFD00021B86D /* ArticlesTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		65C409751BBAAFD00021B86D /* ArticlesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C409731BBAAFD00021B86D /* ArticlesTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		65C409781BBAB0900021B86D /* ACTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C409771BBAB0900021B86D /* ACTagView.swift */; settings = {ASSET_TAGS = (); }; };
 		65C5208C1BB1466C0092675C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C5208B1BB1466C0092675C /* AppDelegate.swift */; };
 		65C520911BB1466C0092675C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C5208F1BB1466C0092675C /* Main.storyboard */; };
 		65C520941BB1466D0092675C /* Xploration_Reader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65C520921BB1466D0092675C /* Xploration_Reader.xcdatamodeld */; };
@@ -38,6 +41,9 @@
 /* Begin PBXFileReference section */
 		65C4096A1BBA96040021B86D /* ArticlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
 		65C4096F1BBA99100021B86D /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		65C409721BBAAFD00021B86D /* ArticlesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewCell.swift; sourceTree = "<group>"; };
+		65C409731BBAAFD00021B86D /* ArticlesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticlesTableViewCell.xib; sourceTree = "<group>"; };
+		65C409771BBAB0900021B86D /* ACTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACTagView.swift; sourceTree = "<group>"; };
 		65C520881BB1466C0092675C /* Xploration Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xploration Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C5208B1BB1466C0092675C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65C520901BB1466C0092675C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +94,23 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		65C409711BBAAF520021B86D /* ArticlesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				65C409721BBAAFD00021B86D /* ArticlesTableViewCell.swift */,
+				65C409731BBAAFD00021B86D /* ArticlesTableViewCell.xib */,
+			);
+			name = ArticlesTableViewCell;
+			sourceTree = "<group>";
+		};
+		65C409761BBAB0760021B86D /* ACTagView */ = {
+			isa = PBXGroup;
+			children = (
+				65C409771BBAB0900021B86D /* ACTagView.swift */,
+			);
+			name = ACTagView;
+			sourceTree = "<group>";
+		};
 		65C5207F1BB1466C0092675C = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +134,8 @@
 		65C5208A1BB1466C0092675C /* Xploration Reader */ = {
 			isa = PBXGroup;
 			children = (
+				65C409761BBAB0760021B86D /* ACTagView */,
+				65C409711BBAAF520021B86D /* ArticlesTableViewCell */,
 				65C4096E1BBA96780021B86D /* Classes */,
 				65C5208F1BB1466C0092675C /* Main.storyboard */,
 				65C520971BB1466D0092675C /* LaunchScreen.storyboard */,
@@ -242,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65C409751BBAAFD00021B86D /* ArticlesTableViewCell.xib in Resources */,
 				65C520991BB1466D0092675C /* LaunchScreen.storyboard in Resources */,
 				65C520961BB1466D0092675C /* Assets.xcassets in Resources */,
 				65C520911BB1466C0092675C /* Main.storyboard in Resources */,
@@ -269,10 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65C409741BBAAFD00021B86D /* ArticlesTableViewCell.swift in Sources */,
 				65C520941BB1466D0092675C /* Xploration_Reader.xcdatamodeld in Sources */,
 				65C4096B1BBA96040021B86D /* ArticlesViewController.swift in Sources */,
 				65C409701BBA99100021B86D /* AboutViewController.swift in Sources */,
 				65C5208C1BB1466C0092675C /* AppDelegate.swift in Sources */,
+				65C409781BBAB0900021B86D /* ACTagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Xploration Reader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.projectchronos.Xploration-Reader";
@@ -425,6 +454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Xploration Reader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.projectchronos.Xploration-Reader";
