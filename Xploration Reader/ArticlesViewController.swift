@@ -11,6 +11,9 @@ import UIKit
 class ArticlesViewController: UIViewController {
 
     @IBOutlet weak var articlesTableView: UITableView!
+    @IBOutlet weak var downloadButton: UIButton!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var rocketImage: UIImageView!
     
     var tableViewData = [Articles]()
     
@@ -25,7 +28,7 @@ class ArticlesViewController: UIViewController {
                             tags: ["appropriations", "hearings", "(nasa)", "orbit", "dynamics", "spacecraft", "satellite", "launching","explosions", "robot","satellite", "launching","explosions", "robot"],
                             text: "speech recognition, EMG activation and motion capture and gesture recognition.  ... providing a literature review on BMI, in the identification of the most ... This  aspect is ... electromagnetic radiation, difficulty to place and position, varying.")
         
-        tableViewData.append(test)
+        //tableViewData.append(test)
         
         let test2 = Articles(image: "",
                             title: "Analogue Transformational Acoustic\": An alternative theoretical ...",
@@ -33,16 +36,22 @@ class ArticlesViewController: UIViewController {
             tags: ["appropriations", "hearings", "(nasa)", "orbit", "dynamics", "spacecraft", "satellite"],
             text: "Using NASA's Chandra X-ray Observatory, astronomers have studied one particular explosion that may provide clues to the dynamics of other, much larger stellar eruptions.")
         
-        tableViewData.append(test2)
+        //tableViewData.append(test2)
         
         articlesTableView.rowHeight = UITableViewAutomaticDimension
         articlesTableView.estimatedRowHeight = 150
+        
+        if(tableViewData.count == 0){
+            articlesTableView.hidden = true
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    // MARK: - TableView
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableViewData.count
@@ -83,7 +92,14 @@ class ArticlesViewController: UIViewController {
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
         articlesTableView.reloadData()
     }
+    
+    // MARK: - Action
 
+    @IBAction func downloadArticles(sender: AnyObject) {
+        
+        
+    }
+    
     /*
     // MARK: - Navigation
 

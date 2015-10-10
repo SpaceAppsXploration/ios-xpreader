@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Change status bar style
         UINavigationBar.appearance().barStyle = .Black
         
+        // Change tab bar tint color
+        UITabBar.appearance().tintColor = UIColor(red:26.0/255, green:35.0/255, blue:126.0/255, alpha:1.0)
+        
         return true
     }
     
