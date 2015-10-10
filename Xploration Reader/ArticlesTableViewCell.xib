@@ -14,15 +14,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Miy-I5-678">
-                        <rect key="frame" x="8" y="8" width="50" height="45"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="45" id="Lna-ig-Yey"/>
-                            <constraint firstAttribute="width" constant="50" id="Ppo-9m-vIo"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Materials, structure and sta..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5A-Fo-3ZB">
-                        <rect key="frame" x="66" y="8" width="246" height="21"/>
+                        <rect key="frame" x="61" y="8" width="251" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="E6V-u9-GfQ"/>
                         </constraints>
@@ -31,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpe-wo-c8b">
-                        <rect key="frame" x="66" y="32" width="246" height="21"/>
+                        <rect key="frame" x="61" y="32" width="251" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Aoa-je-v7f"/>
                         </constraints>
@@ -52,19 +45,26 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earth" translatesAutoresizingMaskIntoConstraints="NO" id="Miy-I5-678">
+                        <rect key="frame" x="17" y="15" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Lna-ig-Yey"/>
+                            <constraint firstAttribute="width" constant="30" id="Ppo-9m-vIo"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="K1T-KJ-Sz2" firstAttribute="top" secondItem="lpe-wo-c8b" secondAttribute="bottom" constant="8" id="24P-D0-9ON"/>
                     <constraint firstItem="lpe-wo-c8b" firstAttribute="top" secondItem="Q5A-Fo-3ZB" secondAttribute="bottom" constant="3" id="3GA-sy-zMe"/>
                     <constraint firstItem="p7a-F4-wQL" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="4jv-ab-LhW"/>
-                    <constraint firstItem="Miy-I5-678" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="BUe-vY-TMR"/>
-                    <constraint firstItem="Q5A-Fo-3ZB" firstAttribute="leading" secondItem="Miy-I5-678" secondAttribute="trailing" constant="8" id="EkX-B7-XE0"/>
+                    <constraint firstItem="Miy-I5-678" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="BUe-vY-TMR"/>
+                    <constraint firstItem="Q5A-Fo-3ZB" firstAttribute="leading" secondItem="Miy-I5-678" secondAttribute="trailing" constant="14" id="EkX-B7-XE0"/>
                     <constraint firstItem="p7a-F4-wQL" firstAttribute="top" relation="greaterThanOrEqual" secondItem="K1T-KJ-Sz2" secondAttribute="bottom" priority="999" id="MUF-Xd-g93"/>
                     <constraint firstItem="K1T-KJ-Sz2" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="PaU-7g-ik8"/>
                     <constraint firstItem="Q5A-Fo-3ZB" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Vlu-ib-bWx"/>
                     <constraint firstAttribute="bottomMargin" secondItem="p7a-F4-wQL" secondAttribute="bottom" id="Z9l-hP-4M1"/>
-                    <constraint firstItem="Miy-I5-678" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="bab-HV-mC2"/>
-                    <constraint firstItem="lpe-wo-c8b" firstAttribute="leading" secondItem="Miy-I5-678" secondAttribute="trailing" constant="8" id="fjJ-xM-L07"/>
+                    <constraint firstItem="Miy-I5-678" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="bab-HV-mC2"/>
+                    <constraint firstItem="lpe-wo-c8b" firstAttribute="leading" secondItem="Miy-I5-678" secondAttribute="trailing" constant="14" id="fjJ-xM-L07"/>
                     <constraint firstItem="lpe-wo-c8b" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="hfY-7l-d5u"/>
                     <constraint firstItem="K1T-KJ-Sz2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hm4-rf-EWV"/>
                     <constraint firstItem="Q5A-Fo-3ZB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="jdp-Ni-wUn"/>
@@ -88,4 +88,7 @@
             <point key="canvasLocation" x="-606" y="122"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="earth" width="45" height="45"/>
+    </resources>
 </document>

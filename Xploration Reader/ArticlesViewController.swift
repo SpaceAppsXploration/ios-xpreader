@@ -28,7 +28,7 @@ class ArticlesViewController: UIViewController {
                             tags: ["appropriations", "hearings", "(nasa)", "orbit", "dynamics", "spacecraft", "satellite", "launching","explosions", "robot","satellite", "launching","explosions", "robot"],
                             text: "speech recognition, EMG activation and motion capture and gesture recognition.  ... providing a literature review on BMI, in the identification of the most ... This  aspect is ... electromagnetic radiation, difficulty to place and position, varying.")
         
-        //tableViewData.append(test)
+        tableViewData.append(test)
         
         let test2 = Articles(image: "",
                             title: "Analogue Transformational Acoustic\": An alternative theoretical ...",
@@ -36,7 +36,7 @@ class ArticlesViewController: UIViewController {
             tags: ["appropriations", "hearings", "(nasa)", "orbit", "dynamics", "spacecraft", "satellite"],
             text: "Using NASA's Chandra X-ray Observatory, astronomers have studied one particular explosion that may provide clues to the dynamics of other, much larger stellar eruptions.")
         
-        //tableViewData.append(test2)
+        tableViewData.append(test2)
         
         articlesTableView.rowHeight = UITableViewAutomaticDimension
         articlesTableView.estimatedRowHeight = 150
