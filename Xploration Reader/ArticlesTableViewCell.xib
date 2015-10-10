@@ -40,11 +40,6 @@
                             <constraint firstAttribute="height" constant="30" id="anb-p5-Eux"/>
                         </constraints>
                     </view>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu!" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7a-F4-wQL">
-                        <rect key="frame" x="8" y="91" width="304" height="50"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    </textView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earth" translatesAutoresizingMaskIntoConstraints="NO" id="Miy-I5-678">
                         <rect key="frame" x="17" y="15" width="30" height="30"/>
                         <constraints>
@@ -52,35 +47,35 @@
                             <constraint firstAttribute="width" constant="30" id="Ppo-9m-vIo"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUT-19-tXa">
+                        <rect key="frame" x="8" y="91" width="304" height="50"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="zUT-19-tXa" secondAttribute="trailing" id="1Ew-vy-bVj"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="zUT-19-tXa" secondAttribute="bottom" id="1eJ-5W-X15"/>
                     <constraint firstItem="K1T-KJ-Sz2" firstAttribute="top" secondItem="lpe-wo-c8b" secondAttribute="bottom" constant="8" id="24P-D0-9ON"/>
                     <constraint firstItem="lpe-wo-c8b" firstAttribute="top" secondItem="Q5A-Fo-3ZB" secondAttribute="bottom" constant="3" id="3GA-sy-zMe"/>
-                    <constraint firstItem="p7a-F4-wQL" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="4jv-ab-LhW"/>
                     <constraint firstItem="Miy-I5-678" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="BUe-vY-TMR"/>
                     <constraint firstItem="Q5A-Fo-3ZB" firstAttribute="leading" secondItem="Miy-I5-678" secondAttribute="trailing" constant="14" id="EkX-B7-XE0"/>
-                    <constraint firstItem="p7a-F4-wQL" firstAttribute="top" relation="greaterThanOrEqual" secondItem="K1T-KJ-Sz2" secondAttribute="bottom" priority="999" id="MUF-Xd-g93"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="zUT-19-tXa" secondAttribute="leading" id="Li7-N0-hvP"/>
                     <constraint firstItem="K1T-KJ-Sz2" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="PaU-7g-ik8"/>
                     <constraint firstItem="Q5A-Fo-3ZB" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Vlu-ib-bWx"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="p7a-F4-wQL" secondAttribute="bottom" id="Z9l-hP-4M1"/>
                     <constraint firstItem="Miy-I5-678" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="bab-HV-mC2"/>
                     <constraint firstItem="lpe-wo-c8b" firstAttribute="leading" secondItem="Miy-I5-678" secondAttribute="trailing" constant="14" id="fjJ-xM-L07"/>
                     <constraint firstItem="lpe-wo-c8b" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="hfY-7l-d5u"/>
                     <constraint firstItem="K1T-KJ-Sz2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hm4-rf-EWV"/>
                     <constraint firstItem="Q5A-Fo-3ZB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="jdp-Ni-wUn"/>
-                    <constraint firstItem="p7a-F4-wQL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="kVK-pq-7te"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="p7a-F4-wQL" secondAttribute="bottom" id="tbX-Hp-q70"/>
+                    <constraint firstItem="zUT-19-tXa" firstAttribute="top" secondItem="K1T-KJ-Sz2" secondAttribute="bottom" priority="999" id="x40-Ed-5LY"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="Z9l-hP-4M1"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="articleImage" destination="Miy-I5-678" id="F3d-tF-hzU"/>
                 <outlet property="articleSubTitle" destination="lpe-wo-c8b" id="hEn-uB-kVy"/>
-                <outlet property="articleText" destination="p7a-F4-wQL" id="MUQ-ne-Zt9"/>
+                <outlet property="articleText" destination="zUT-19-tXa" id="TE4-lm-C5E"/>
                 <outlet property="articleTitle" destination="Q5A-Fo-3ZB" id="fNZ-nT-hDM"/>
                 <outlet property="tagView" destination="K1T-KJ-Sz2" id="YfG-Yv-hWM"/>
                 <outlet property="tagViewHeightConstraint" destination="anb-p5-Eux" id="SfG-Aq-qAb"/>

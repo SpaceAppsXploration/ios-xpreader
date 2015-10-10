@@ -14,7 +14,7 @@ class ArticlesTableViewCell: UITableViewCell {
     @IBOutlet weak var articleTitle: UILabel!
     @IBOutlet weak var articleSubTitle: UILabel!
     @IBOutlet weak var tagView: ACTagView!
-    @IBOutlet weak var articleText: UITextView!
+    @IBOutlet weak var articleText: UILabel!
     @IBOutlet weak var tagViewHeightConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
