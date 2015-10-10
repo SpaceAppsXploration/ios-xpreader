@@ -26,7 +26,7 @@
         <!--About-->
         <scene sceneID="gTQ-u8-e47">
             <objects>
-                <viewController id="rYV-IZ-5N8" customClass="AboutViewController" customModule="Xploration_Reader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rYV-IZ-5N8" customClass="AboutViewController" customModule="XpReader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7MP-By-5bZ"/>
                         <viewControllerLayoutGuide type="bottom" id="ohX-HS-t2A"/>
@@ -68,7 +68,7 @@
         <!--Articles-->
         <scene sceneID="d6R-qY-PqF">
             <objects>
-                <viewController id="wvo-u4-eQ3" customClass="ArticlesViewController" customModule="Xploration_Reader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wvo-u4-eQ3" customClass="ArticlesViewController" customModule="XpReader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xS6-Y0-DBK"/>
                         <viewControllerLayoutGuide type="bottom" id="S7u-h8-cY0"/>
