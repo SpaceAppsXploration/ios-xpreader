@@ -11,6 +11,7 @@ import UIKit
 class ArticlesViewController: UIViewController {
 
     @IBOutlet weak var articlesTableView: UITableView!
+    
     var tableViewData = [Articles]()
     
     override func viewDidLoad() {
@@ -46,10 +47,6 @@ class ArticlesViewController: UIViewController {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableViewData.count
     }
-    
-    /*func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
-        
-    }*/
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         

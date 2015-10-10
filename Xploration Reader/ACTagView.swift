@@ -91,7 +91,7 @@ class ACTagView: UIView {
         
         let button = UIButton(frame: CGRectZero)
         button.backgroundColor = ACTagView.color
-        button.layer.cornerRadius = 10
+        button.layer.cornerRadius = 5
         button.setTitle(str as String, forState: UIControlState.Normal)
         //button.titleLabel.font = [UIFont systemFontOfSize:size];  
         button.titleLabel?.font = UIFont.systemFontOfSize(13)

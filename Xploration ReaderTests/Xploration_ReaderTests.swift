@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Xploration_Reader
 
 class Xploration_ReaderTests: XCTestCase {
     

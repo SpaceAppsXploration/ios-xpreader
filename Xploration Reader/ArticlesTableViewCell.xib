@@ -85,7 +85,7 @@
                 <outlet property="tagView" destination="K1T-KJ-Sz2" id="YfG-Yv-hWM"/>
                 <outlet property="tagViewHeightConstraint" destination="anb-p5-Eux" id="SfG-Aq-qAb"/>
             </connections>
-            <point key="canvasLocation" x="-606" y="309"/>
+            <point key="canvasLocation" x="-606" y="122"/>
         </tableViewCell>
     </objects>
 </document>
