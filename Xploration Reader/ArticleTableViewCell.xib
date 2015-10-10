@@ -80,7 +80,7 @@
                 <outlet property="tagView" destination="K1T-KJ-Sz2" id="YfG-Yv-hWM"/>
                 <outlet property="tagViewHeightConstraint" destination="anb-p5-Eux" id="SfG-Aq-qAb"/>
             </connections>
-            <point key="canvasLocation" x="-606" y="122"/>
+            <point key="canvasLocation" x="-568" y="101"/>
         </tableViewCell>
     </objects>
     <resources>
