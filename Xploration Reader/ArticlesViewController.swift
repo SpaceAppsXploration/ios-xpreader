@@ -61,11 +61,11 @@ class ArticlesViewController: UIViewController {
         
         let identifier = "ArticlesTableViewCell"
         
-        var cell: ArticlesTableViewCell! = tableView.dequeueReusableCellWithIdentifier(identifier) as? ArticlesTableViewCell
+        var cell: ArticleTableViewCell! = tableView.dequeueReusableCellWithIdentifier(identifier) as? ArticleTableViewCell
         
         if cell == nil {
-            tableView.registerNib(UINib(nibName: "ArticlesTableViewCell", bundle: nil), forCellReuseIdentifier: identifier)
-            cell = tableView.dequeueReusableCellWithIdentifier(identifier) as? ArticlesTableViewCell
+            tableView.registerNib(UINib(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: identifier)
+            cell = tableView.dequeueReusableCellWithIdentifier(identifier) as? ArticleTableViewCell
         }
         
         let article = tableViewData[indexPath.row]
