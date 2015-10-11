@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49B57A416FA77823A70CC64E /* Pods_XpReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5139F2250FECF0EF7F611ADB /* Pods_XpReader.framework */; };
 		65793BA51BC967C800FE83F5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65793B9F1BC967C800FE83F5 /* AboutViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		65793BA61BC967C800FE83F5 /* ACTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65793BA01BC967C800FE83F5 /* ACTagView.swift */; settings = {ASSET_TAGS = (); }; };
 		65793BA71BC967C800FE83F5 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65793BA11BC967C800FE83F5 /* Articles.swift */; settings = {ASSET_TAGS = (); }; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5139F2250FECF0EF7F611ADB /* Pods_XpReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XpReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65793B9F1BC967C800FE83F5 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		65793BA01BC967C800FE83F5 /* ACTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACTagView.swift; sourceTree = "<group>"; };
 		65793BA11BC967C800FE83F5 /* Articles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		65C520951BB1466D0092675C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65C520981BB1466D0092675C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65C5209A1BB1466D0092675C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E2D03A022EBB4A0B0470B42 /* Pods-XpReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XpReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XpReader/Pods-XpReader.debug.xcconfig"; sourceTree = "<group>"; };
+		8799719B78F9EA246C988584 /* Pods-XpReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XpReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-XpReader/Pods-XpReader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,12 +45,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B57A416FA77823A70CC64E /* Pods_XpReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DE1A6FD2C774AB9F5CADE3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E2D03A022EBB4A0B0470B42 /* Pods-XpReader.debug.xcconfig */,
+				8799719B78F9EA246C988584 /* Pods-XpReader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		65793BAB1BC9684300FE83F5 /* ACTagView */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,13 +77,13 @@
 			name = "Classes Object";
 			sourceTree = "<group>";
 		};
-		65793BAD1BC9685D00FE83F5 /* Calsses Template */ = {
+		65793BAD1BC9685D00FE83F5 /* Classes Template */ = {
 			isa = PBXGroup;
 			children = (
 				65793BA41BC967C800FE83F5 /* ArticleTableViewCell.xib */,
 				65793BA31BC967C800FE83F5 /* ArticleTableViewCell.swift */,
 			);
-			name = "Calsses Template";
+			name = "Classes Template";
 			sourceTree = "<group>";
 		};
 		65793BAE1BC9693100FE83F5 /* Classes Controller */ = {
@@ -86,6 +100,8 @@
 			children = (
 				65C5208A1BB1466C0092675C /* Xploration Reader */,
 				65C520891BB1466C0092675C /* Products */,
+				4DE1A6FD2C774AB9F5CADE3B /* Pods */,
+				E1299FDD6AC78047C65EF47A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,7 +119,7 @@
 				65C5208B1BB1466C0092675C /* AppDelegate.swift */,
 				65793BAB1BC9684300FE83F5 /* ACTagView */,
 				65793BAC1BC9684A00FE83F5 /* Classes Object */,
-				65793BAD1BC9685D00FE83F5 /* Calsses Template */,
+				65793BAD1BC9685D00FE83F5 /* Classes Template */,
 				65793BAE1BC9693100FE83F5 /* Classes Controller */,
 				65C5208F1BB1466C0092675C /* Main.storyboard */,
 				65C520971BB1466D0092675C /* LaunchScreen.storyboard */,
@@ -114,6 +130,14 @@
 			path = "Xploration Reader";
 			sourceTree = "<group>";
 		};
+		E1299FDD6AC78047C65EF47A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5139F2250FECF0EF7F611ADB /* Pods_XpReader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65C520B31BB1466D0092675C /* Build configuration list for PBXNativeTarget "XpReader" */;
 			buildPhases = (
+				37EDA245E49916FA4213A06E /* Check Pods Manifest.lock */,
 				65C520841BB1466C0092675C /* Sources */,
 				65C520851BB1466C0092675C /* Frameworks */,
 				65C520861BB1466C0092675C /* Resources */,
+				F18E45849FA77480E966A951 /* Embed Pods Frameworks */,
+				5F42D58FF63B11F224CDD470 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,6 +206,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37EDA245E49916FA4213A06E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5F42D58FF63B11F224CDD470 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XpReader/Pods-XpReader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F18E45849FA77480E966A951 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XpReader/Pods-XpReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		65C520841BB1466C0092675C /* Sources */ = {
@@ -302,9 +377,11 @@
 		};
 		65C520B41BB1466D0092675C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E2D03A022EBB4A0B0470B42 /* Pods-XpReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Xploration Reader/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.projectchronos.Xploration-Reader";
 				PRODUCT_NAME = XpReader;
@@ -313,9 +390,11 @@
 		};
 		65C520B51BB1466D0092675C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8799719B78F9EA246C988584 /* Pods-XpReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Xploration Reader/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.projectchronos.Xploration-Reader";
 				PRODUCT_NAME = XpReader;
