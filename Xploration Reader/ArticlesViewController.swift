@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftHTTP
 
 class ArticlesViewController: UIViewController {
 
@@ -22,7 +23,7 @@ class ArticlesViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        let test = Articles(image: "",
+        /*let test = Articles(image: "",
                             title: "Analogue Transformational Acoustic\": An alternative theoretical ...",
                             date: "22/01/2015",
                             tags: ["appropriations", "hearings", "(nasa)", "orbit", "dynamics", "spacecraft", "satellite", "launching","explosions", "robot","satellite", "launching","explosions", "robot"],
@@ -36,11 +37,13 @@ class ArticlesViewController: UIViewController {
             tags: ["appropriations", "hearings", "(nasa)", "orbit", "dynamics", "spacecraft", "satellite"],
             text: "Using NASA's Chandra X-ray Observatory, astronomers have studied one particular explosion that may provide clues to the dynamics of other, much larger stellar eruptions.")
         
-        tableViewData.append(test2)
+        tableViewData.append(test2)*/
         
+        // For dynamic cell height
         articlesTableView.rowHeight = UITableViewAutomaticDimension
         articlesTableView.estimatedRowHeight = 150
         
+        // if no articles hidden table for show download button
         if(tableViewData.count == 0){
             articlesTableView.hidden = true
         }
@@ -70,7 +73,7 @@ class ArticlesViewController: UIViewController {
         
         let article = tableViewData[indexPath.row]
         
-        cell.articleImage = UIImageView()
+        // cell.articleImage = UIImageView()
         cell.articleTitle.text = article.title
         cell.articleSubTitle.text = article.date
         cell.articleText.text = article.text
@@ -97,7 +100,73 @@ class ArticlesViewController: UIViewController {
 
     @IBAction func downloadArticles(sender: AnyObject) {
         
+        rocketImage.hidden = true
+        downloadButton.hidden = true
+        spinner.startAnimating()
         
+        do {
+            let opt = try HTTP.GET("http://hypermedia.projectchronos.eu/articles/v04/")
+            opt.start { response in
+                
+                if let err = response.error {
+                    
+                    // print("error: \(err.localizedDescription)")
+                    
+                    dispatch_async(dispatch_get_main_queue()) {
+                        
+                        // update some UI
+                        let alertController = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: .Alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                        alertController.addAction(defaultAction)
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                        
+                        self.rocketImage.hidden = false
+                        self.downloadButton.hidden = false
+                        self.spinner.stopAnimating()
+                    }
+        
+                }
+                
+                print("opt finished: \(response.description)")
+                //print("data is: \(response.data)") access the response of the data with response.data
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    
+                    // update some UI
+                    self.spinner.stopAnimating()
+                    self.articlesTableView.hidden = false
+                    
+                    self.pasingDataAndShowOnTable(response.data)
+                }
+                
+            }
+        } catch let error {
+            print("got an error creating the request: \(error)")
+        }
+    }
+    
+    func pasingDataAndShowOnTable(jsonData: NSData){
+        
+        do {
+            if let json: NSDictionary = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
+                if let articles = json["articles"] as? NSArray {
+                    for article in articles {
+                        
+                        let art = Articles(json: article as! NSDictionary)
+                        tableViewData.append(art)
+                    }
+                }
+            }
+            
+            articlesTableView.reloadData()
+            
+        } catch let error {
+            // Something else happened.
+            // Insert your domain, code, etc. when constructing the error.
+            // let error: NSError = NSError(domain: "<Your domain>", code: 1, userInfo: nil)
+            
+            print("got an error creating the request: \(error)")
+        }
     }
     
     /*
