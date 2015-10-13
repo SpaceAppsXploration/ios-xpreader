@@ -16,6 +16,8 @@ class Articles {
     var tags: [String]
     var text: String?
     var type: String?
+    var keyworldUrl: String?
+    var index: NSInteger?
 
     init(image: String, title: String, date: String, tags: [String], text: String, type: String){
         
@@ -35,6 +37,8 @@ class Articles {
         self.tags = []
         self.text = json["abstract"] as? String
         self.type = json["type_of"] as? String
+        self.keyworldUrl = json["keywords_url"] as? String
+        self.index = 0
     }
     
 }

@@ -92,6 +92,7 @@ class ArticlesViewController: UIViewController {
         
     }
     
+    
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
         articlesTableView.reloadData()
     }
@@ -136,7 +137,7 @@ class ArticlesViewController: UIViewController {
                     self.spinner.stopAnimating()
                     self.articlesTableView.hidden = false
                     
-                    self.pasingDataAndShowOnTable(response.data)
+                    self.parsingDataAndShowOnTable(response.data)
                 }
                 
             }
@@ -145,15 +146,30 @@ class ArticlesViewController: UIViewController {
         }
     }
     
-    func pasingDataAndShowOnTable(jsonData: NSData){
+    func parsingDataAndShowOnTable(jsonData: NSData){
         
         do {
+            
             if let json: NSDictionary = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
                 if let articles = json["articles"] as? NSArray {
+                    
+                    var count = 0
+                    
                     for article in articles {
                         
                         let art = Articles(json: article as! NSDictionary)
+                        art.index = count
+                        
                         tableViewData.append(art)
+                        
+                        // get keywords on a background thread
+                        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+                        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                            self.getKeywords(art)
+                        }
+                        
+                        count++
+                        
                     }
                 }
             }
@@ -161,12 +177,63 @@ class ArticlesViewController: UIViewController {
             articlesTableView.reloadData()
             
         } catch let error {
+            
             // Something else happened.
             // Insert your domain, code, etc. when constructing the error.
             // let error: NSError = NSError(domain: "<Your domain>", code: 1, userInfo: nil)
             
             print("got an error creating the request: \(error)")
         }
+    }
+    
+    func getKeywords(articles: Articles){
+        
+        do {
+            
+            let opt = try HTTP.GET(articles.keyworldUrl!)
+            opt.start { response in
+                
+                if let err = response.error {
+                    print("error: \(err.localizedDescription)")
+                }
+                
+                print("Downloaded keyword for articles \(articles.title)")
+                
+                // print("opt finished: \(response.description)")
+                // print("data is: \(response.data)") access the response of the data with response.data
+
+                do {
+                    
+                    if let json: NSDictionary = try NSJSONSerialization.JSONObjectWithData(response.data, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
+                        if let keywords = json["keywords"] as? NSArray {
+                            for keyword in keywords {
+                                articles.tags.append(keyword["value"] as! String)
+                            }
+                            
+                            dispatch_async(dispatch_get_main_queue()) {
+                                
+                                if(articles.tags.count > 0){
+                                    self.articlesTableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: articles.index!, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
+                                }
+                            }
+                        }
+                    }
+                    
+                } catch let error {
+                    
+                    // Something else happened.
+                    // Insert your domain, code, etc. when constructing the error.
+                    // let error: NSError = NSError(domain: "<Your domain>", code: 1, userInfo: nil)
+                    
+                    print("got an error creating the request: \(error)")
+                }
+                
+            }
+            
+        } catch let error {
+            print("got an error creating the request: \(error)")
+        }
+        
     }
     
     /*
